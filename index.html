@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart WiFi Solutions | Keeping Businesses Connected</title>
-  <meta name="description" content="Reliable, secure, and high-performance WiFi, CCTV and structured cabling solutions for businesses across the UK. Professional installation, full building coverage, and ongoing support.">
+  <title>Business WiFi Installation | Smart WiFi Solutions</title>
+  <meta name="description" content="Professional business WiFi installation across Salisbury, Wiltshire and the UK. Smart WiFi Solutions designs and installs enterprise WiFi networks that eliminate dead zones and keep your business connected.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -25,750 +25,287 @@
       --radius-lg:  12px;
     }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--dark-text);
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4, h5 {
-      font-family: 'Montserrat', sans-serif;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--dark-text); overflow-x: hidden; }
+    h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
+    ul { list-style: none; }
 
     /* ─── NAV ──────────────────────────────────────────── */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      height: 70px;
-      background: rgba(3, 22, 51, 0.95);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 70px;
+      background: rgba(3,22,51,0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       transition: background 0.3s, box-shadow 0.3s;
     }
-    nav.scrolled {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    }
+    nav.scrolled { background: var(--white); border-bottom: 1px solid var(--border); box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
     nav.scrolled .nav-links a { color: var(--slate); }
     nav.scrolled .nav-links a:hover { color: var(--blue); }
     nav.scrolled .nav-logo-sub { color: var(--mid-grey); }
     nav.scrolled .nav-logo-name { color: var(--navy); }
     nav.scrolled .nav-logo-name .blue { color: var(--blue); }
     nav.scrolled .nav-phone { color: var(--navy); }
+    nav.scrolled .hamburger span { background: var(--navy); }
     .nav-logo { display: flex; align-items: center; }
     .nav-logo-img { height: 44px; width: auto; display: block; }
     .nav-logo svg { width: 38px; height: 38px; flex-shrink: 0; }
-    .nav-logo-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.1;
-      letter-spacing: -0.3px;
-    }
+    .nav-logo-name { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -0.3px; }
     .nav-logo-name .blue { color: var(--blue); }
-    .nav-logo-sub {
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-    }
+    .nav-logo-sub { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
     .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-    .nav-links a {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.82);
-      letter-spacing: 0.2px;
-      transition: color 0.2s;
-    }
+    .nav-links a { font-size: 13.5px; font-weight: 500; color: rgba(255,255,255,0.82); letter-spacing: 0.2px; transition: color 0.2s; }
     .nav-links a:hover { color: var(--white); }
-    .nav-cta {
-      background: var(--blue) !important;
-      color: var(--white) !important;
-      padding: 9px 20px !important;
-      border-radius: var(--radius) !important;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-    }
+    .nav-cta { background: var(--blue) !important; color: var(--white) !important; padding: 9px 20px !important; border-radius: var(--radius) !important; font-weight: 600 !important; transition: background 0.2s !important; }
     .nav-cta:hover { background: var(--blue-dark) !important; }
-    .nav-phone {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.9);
-    }
-    /* Dropdown */
+    .nav-phone { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.9); }
     .nav-dropdown { position: relative; }
-    .nav-dropdown-toggle { cursor: pointer; }
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-      list-style: none;
-      min-width: 180px;
-      padding: 8px 0;
-      z-index: 200;
-    }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: 0 8px 32px rgba(0,0,0,0.12); list-style: none; min-width: 180px; padding: 8px 0; z-index: 200; }
     .nav-dropdown:hover .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu li a {
-      display: block;
-      padding: 10px 20px;
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--slate) !important;
-      transition: background 0.15s, color 0.15s;
-      white-space: nowrap;
-    }
+    .nav-dropdown-menu li a { display: block; padding: 10px 20px; font-size: 13.5px; font-weight: 500; color: var(--slate) !important; transition: background 0.15s, color 0.15s; white-space: nowrap; }
     .nav-dropdown-menu li a:hover { background: var(--light); color: var(--blue) !important; }
-    .nav-dropdown-menu::before {
-      content: '';
-      position: absolute;
-      top: -6px; left: 50%;
-      transform: translateX(-50%);
-      width: 12px; height: 12px;
-      background: var(--white);
-      border-left: 1px solid var(--border);
-      border-top: 1px solid var(--border);
-      rotate: 45deg;
-    }
-
+    .nav-dropdown-menu::before { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: var(--white); border-left: 1px solid var(--border); border-top: 1px solid var(--border); rotate: 45deg; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: background 0.2s; }
-    nav.scrolled .hamburger span { background: var(--navy); }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
 
-    /* ─── HERO ─────────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 55% 45%;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-left {
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      padding: 120px 6% 80px 6%;
-      position: relative;
-      z-index: 2;
-    }
-    /* diagonal clip on the right edge of left panel */
-    .hero-left::after {
-      content: '';
-      position: absolute;
-      top: 0; right: -60px; bottom: 0;
-      width: 120px;
-      background: var(--navy);
-      clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
-      z-index: 3;
-    }
-    .hero-right {
-      background: linear-gradient(135deg, #1a3a6e 0%, #0d2650 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    /* Simulated office photo using gradient + grid pattern */
-    .hero-right::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(3,22,51,0.35) 0%, rgba(3,22,51,0.1) 40%, rgba(3,22,51,0.4) 100%),
-        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-    }
-    .hero-content { position: relative; z-index: 2; max-width: 540px; }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(10,102,217,0.15);
-      border: 1px solid rgba(10,102,217,0.4);
-      border-radius: 50px;
-      padding: 6px 14px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #5ba4f5;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-    .hero-badge span {
-      width: 6px; height: 6px;
-      background: var(--blue);
-      border-radius: 50%;
-      animation: blink 1.5s ease infinite;
-    }
-    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
-    .hero h1 {
-      font-size: clamp(38px, 4.5vw, 62px);
-      font-weight: 800;
-      line-height: 1.1;
-      color: var(--white);
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
-    }
-    .hero h1 .blue { color: var(--blue); }
-    .hero-tagline {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 8px;
-      line-height: 1.5;
-    }
-    .hero-tagline .blue { color: var(--blue); }
-    .hero p {
-      font-size: 15px;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 36px;
-    }
-    .hero-rule { width: 40px; height: 3px; background: var(--blue); margin: 20px 0 24px; border-radius: 2px; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    /* ─── BUTTONS ──────────────────────────────────────── */
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--blue);
-      color: var(--white);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13.5px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      padding: 13px 28px;
-      border-radius: var(--radius);
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--blue); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; letter-spacing: 0.3px;
+      padding: 13px 28px; border-radius: var(--radius);
       transition: background 0.2s, transform 0.2s;
     }
     .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
     .btn-outline-white {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      border: 1.5px solid rgba(255,255,255,0.3);
-      color: var(--white);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13.5px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      padding: 13px 28px;
-      border-radius: var(--radius);
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; border: 1.5px solid rgba(255,255,255,0.3); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; letter-spacing: 0.3px;
+      padding: 13px 28px; border-radius: var(--radius);
       transition: border-color 0.2s, background 0.2s;
     }
     .btn-outline-white:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.06); }
-    .btn-outline-blue {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      border: 1.5px solid var(--blue);
-      color: var(--blue);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13.5px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      padding: 13px 28px;
-      border-radius: var(--radius);
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-outline-blue:hover { background: var(--blue); color: var(--white); }
-    /* hero floating badge */
-    .hero-float-badge {
-      position: absolute;
-      bottom: 48px;
-      left: 40px;
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-      z-index: 5;
-      min-width: 200px;
-    }
-    .float-icon {
-      width: 44px; height: 44px;
-      background: var(--blue-light);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .float-icon svg { width: 22px; height: 22px; color: var(--blue); }
-    .float-text .num { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: var(--navy); }
-    .float-text .lbl { font-size: 11px; color: var(--mid-grey); font-weight: 500; }
 
-    /* ─── PARTNERS STRIP ────────────────────────────────── */
-    .partners-section {
-      background: var(--navy);
-      padding: 80px 5%;
-      text-align: center;
+    /* ─── HERO ─────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh; display: grid; grid-template-columns: 55% 45%;
+      position: relative; overflow: hidden; padding: 0;
     }
-    .partners-section .section-tag { color: #5ba4f5; margin-bottom: 10px; }
-    .partners-section .section-heading { color: var(--white); margin-bottom: 48px; }
-    .partners-logos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
+    .hero-left {
+      background: var(--navy); display: flex; align-items: center;
+      padding: 120px 6% 80px 6%; position: relative; z-index: 2;
     }
-    .partner-logo {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 20px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 96px;
-      min-width: 180px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    .hero-left::after {
+      content: ''; position: absolute; top: 0; right: -60px; bottom: 0; width: 120px;
+      background: var(--navy); clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%); z-index: 3;
     }
-    .partner-logo:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    .hero-right {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #1a3a6e 0%, #0d2650 100%);
     }
-    .partner-logo img {
-      max-height: 52px;
-      max-width: 150px;
-      width: auto;
-      object-fit: contain;
+    .hero-right::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(3,22,51,0.35) 0%, rgba(3,22,51,0.1) 40%, rgba(3,22,51,0.4) 100%),
+        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
     }
-    .partner-logo .logo-fallback {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 16px;
-      font-weight: 800;
-      color: var(--navy);
+    .hero-content { position: relative; z-index: 2; max-width: 540px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(10,102,217,0.15); border: 1px solid rgba(10,102,217,0.4);
+      border-radius: 50px; padding: 6px 14px;
+      font-size: 11px; font-weight: 700; color: #5ba4f5; letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 28px;
     }
+    .hero-badge span { width: 6px; height: 6px; background: var(--blue); border-radius: 50%; animation: blink 1.5s ease infinite; }
+    @keyframes blink { 0%,100%{opacity:1;}50%{opacity:0.2;} }
+    .hero h1 { font-size: clamp(38px, 4.5vw, 62px); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 20px; letter-spacing: -0.5px; }
+    .hero h1 .blue { color: var(--blue); }
+    .hero-rule { width: 40px; height: 3px; background: var(--blue); margin: 20px 0 24px; border-radius: 2px; }
+    .hero p { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.65); margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    /* ─── INTRO / SERVICES OVERVIEW ─────────────────────── */
-    .services-overview {
-      background: var(--white);
-      padding: 80px 5%;
-    }
-    .section-tag {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 12px;
-    }
-    .section-heading {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(26px, 3vw, 40px);
-      font-weight: 800;
-      line-height: 1.15;
-      color: var(--navy);
-      margin-bottom: 14px;
-      letter-spacing: -0.3px;
-    }
-    .section-sub {
-      font-size: 15px;
-      color: var(--mid-grey);
-      line-height: 1.75;
-      max-width: 560px;
-    }
+    /* ─── SHARED SECTION STYLES ────────────────────────── */
+    section { padding: 88px 5%; }
+    .section-tag { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+    .section-heading { font-family: 'Montserrat', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 800; line-height: 1.15; color: var(--navy); margin-bottom: 14px; letter-spacing: -0.3px; }
+    .section-sub { font-size: 15px; color: var(--mid-grey); line-height: 1.75; max-width: 600px; }
     .section-header { margin-bottom: 52px; }
     .section-header-center { text-align: center; }
     .section-header-center .section-sub { margin: 0 auto; }
-    /* ─── OVERVIEW TABS ─────────────────────────────────── */
-    .overview-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; }
-    .overview-tab {
-      font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700;
-      padding: 10px 28px; border-radius: 50px; cursor: pointer;
-      border: 1.5px solid var(--border); background: var(--white); color: var(--mid-grey);
-      transition: all 0.2s;
-    }
-    .overview-tab:hover { border-color: var(--blue); color: var(--blue); }
-    .overview-tab.active { background: var(--blue); border-color: var(--blue); color: var(--white); }
-    .overview-panel { display: none; }
-    .overview-panel.active { display: block; animation: fadeInUp 0.3s ease forwards; }
-    @keyframes fadeInUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
-    /* 3-col overview cards */
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      background: var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    /* 2-col overview cards */
-    .overview-grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      background: var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      max-width: 820px; margin: 0 auto;
-    }
-    .overview-card {
-      background: var(--white);
-      padding: 40px 32px;
-      text-align: center;
-      transition: background 0.2s;
-    }
-    .overview-card:hover { background: var(--light); }
-    .overview-icon-wrap {
-      width: 72px; height: 72px;
-      background: var(--blue);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-    }
-    .overview-icon-wrap svg { width: 32px; height: 32px; color: var(--white); }
-    .overview-card h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 10px;
-      letter-spacing: -0.2px;
-    }
-    .overview-rule { width: 32px; height: 2px; background: var(--blue); margin: 10px auto 14px; border-radius: 2px; }
-    .overview-card p { font-size: 13.5px; color: var(--mid-grey); line-height: 1.7; margin-bottom: 20px; }
-    .overview-card .btn-find-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--blue);
-      border: 1.5px solid var(--blue);
-      border-radius: var(--radius);
-      padding: 9px 20px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .overview-card .btn-find-more:hover { background: var(--blue); color: var(--white); }
-    .overview-card .btn-find-more svg { width: 14px; height: 14px; transition: transform 0.2s; }
-    .overview-card .btn-find-more:hover svg { transform: translateX(3px); }
 
-    /* ─── DARK SECTION OVERRIDES ────────────────────────── */
+    /* Dark section overrides */
     .dark-section .section-tag { color: #5ba4f5; }
     .dark-section .section-heading { color: var(--white); }
     .dark-section .section-sub { color: rgba(255,255,255,0.6); }
-    .dark-section .service-card {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.1);
-    }
-    .dark-section .service-card:hover {
-      background: rgba(255,255,255,0.09);
-      border-color: rgba(10,102,217,0.6);
-      box-shadow: 0 4px 24px rgba(10,102,217,0.2);
-    }
+    .dark-section .service-card { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+    .dark-section .service-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(10,102,217,0.6); box-shadow: 0 4px 24px rgba(10,102,217,0.2); }
     .dark-section .service-card h3 { color: var(--white); }
     .dark-section .service-card p { color: rgba(255,255,255,0.58); }
-    .dark-section .service-icon {
-      background: rgba(10,102,217,0.25);
-      border: 1px solid rgba(10,102,217,0.4);
+    .dark-section .service-icon { background: rgba(10,102,217,0.25); border: 1px solid rgba(10,102,217,0.4); }
+
+    /* ─── WHAT IS SECTION (text only) ─────────────────── */
+    /* ─── WHAT IS SECTION ─────────────────────────────── */
+    .what-is-section { background: var(--white); padding: 88px 5%; position: relative; overflow: hidden; }
+    .what-is-section-tag { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; position: relative; z-index: 1; }
+    .what-is-heading { font-size: clamp(28px,3vw,42px); font-weight: 800; color: var(--navy); letter-spacing: -0.3px; line-height: 1.15; margin-bottom: 32px; position: relative; z-index: 1; }
+    .what-is-heading span { color: var(--blue); }
+    .what-is-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; position: relative; z-index: 1; }
+    /* Content box on left */
+    .wi-panel {
+      display: none;
+      background: var(--light); border: 1px solid var(--border);
+      border-radius: 16px; padding: 36px;
+    }
+    .wi-panel.active { display: block; animation: fadeInUp 0.35s ease forwards; }
+    @keyframes fadeInUp { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+    .wi-panel-icon { width: 52px; height: 52px; background: var(--blue); border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .wi-panel-icon svg { width: 26px; height: 26px; color: white; }
+    .wi-panel h3 { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+    .wi-panel p { font-size: 14.5px; line-height: 1.8; color: var(--mid-grey); margin-bottom: 12px; }
+    .wi-panel p:last-of-type { margin-bottom: 20px; }
+    .wi-panel-points { display: flex; flex-direction: column; gap: 10px; }
+    .wi-point { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--dark-text); }
+    .wi-point::before { content: ''; width: 18px; height: 18px; background: var(--blue-light); border: 1px solid rgba(10,102,217,0.3); border-radius: 50%; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A66D9' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; background-size: 10px; }
+    /* Accordion on right */
+    .wi-accordion { display: flex; flex-direction: column; gap: 10px; }
+    .wi-acc-item {
+      background: var(--light); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .wi-acc-item.active { background: var(--blue-light); border-color: rgba(10,102,217,0.3); }
+    .wi-acc-header {
+      display: flex; align-items: center; gap: 14px;
+      padding: 18px 20px; cursor: pointer;
+    }
+    .wi-acc-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.25s; }
+    .wi-acc-item.active .wi-acc-icon { background: var(--blue); }
+    .wi-acc-icon svg { width: 19px; height: 19px; color: var(--blue); }
+    .wi-acc-item.active .wi-acc-icon svg { color: white; }
+    .wi-acc-label { font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; color: var(--slate); transition: color 0.25s; flex: 1; }
+    .wi-acc-item.active .wi-acc-label { color: var(--navy); }
+    .wi-acc-chevron { color: var(--mid-grey); transition: transform 0.3s, color 0.25s; flex-shrink: 0; }
+    .wi-acc-item.active .wi-acc-chevron { transform: rotate(90deg); color: var(--blue); }
+    .wi-acc-body {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      padding: 0 20px;
+    }
+    .wi-acc-item.active .wi-acc-body { max-height: 400px; padding: 0 20px 18px; }
+    .wi-acc-body p { font-size: 13.5px; line-height: 1.7; color: var(--mid-grey); border-top: 1px solid var(--border); padding-top: 14px; }
+    .wi-acc-body-inner { border-top: 1px solid var(--border); padding-top: 14px; }
+    .wi-acc-body-inner p { border-top: none; padding-top: 0; margin-bottom: 12px; }
+    .wi-acc-points { display: flex; flex-direction: column; gap: 10px; }
+    .wi-acc-point { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 1.6; color: var(--dark-text); }
+    .wi-acc-point::before { content: ''; width: 18px; height: 18px; min-width: 18px; background: var(--blue-light); border: 1px solid rgba(10,102,217,0.3); border-radius: 50%; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A66D9' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; background-size: 10px; margin-top: 2px; }
+    @media (max-width: 960px) {
+      .what-is-layout { grid-template-columns: 1fr; gap: 36px; }
     }
 
-    /* ─── WIFI SOLUTIONS ─────────────────────────────────── */
-    .wifi-section { background: var(--navy); padding: 88px 5%; }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+    /* ─── SERVICES GRID ────────────────────────────────── */
+    .wifi-section { background: var(--navy); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px 24px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 24px;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .service-card:hover {
-      border-color: var(--blue);
-      box-shadow: 0 4px 24px rgba(10,102,217,0.1);
-    }
-    .service-icon {
-      width: 48px; height: 48px;
-      background: var(--blue-light);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 18px;
-    }
+    .service-card:hover { border-color: var(--blue); box-shadow: 0 4px 24px rgba(10,102,217,0.1); }
+    .service-icon { width: 48px; height: 48px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
     .service-icon svg { width: 24px; height: 24px; color: var(--blue); }
-    .service-card h3 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
+    .service-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
     .service-card p { font-size: 13.5px; color: var(--mid-grey); line-height: 1.65; }
 
-    /* ─── WHY CHOOSE US ─────────────────────────────────── */
-    .why-section { background: var(--white); padding: 88px 5%; }
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-    .why-reasons { display: flex; flex-direction: column; gap: 16px; }
-    .reason {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      padding: 20px 22px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      background: var(--white);
-    }
-    .reason:hover {
-      border-color: var(--blue);
-      box-shadow: 0 2px 16px rgba(10,102,217,0.08);
-    }
-    .reason-icon {
-      flex-shrink: 0;
-      width: 40px; height: 40px;
-      background: var(--blue);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .reason-icon svg { width: 20px; height: 20px; color: var(--white); }
-    .reason-text h4 { font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-    .reason-text p { font-size: 13px; color: var(--mid-grey); line-height: 1.6; }
-    /* why visual panel */
-    .why-visual {
-      background: var(--navy);
-      border-radius: 16px;
-      padding: 48px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-    .why-visual::before {
-      content: '';
-      position: absolute;
-      top: -40px; right: -40px;
-      width: 200px; height: 200px;
-      background: radial-gradient(circle, rgba(10,102,217,0.3) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    .why-visual::after {
-      content: '';
-      position: absolute;
-      bottom: -40px; left: -40px;
-      width: 160px; height: 160px;
-      background: radial-gradient(circle, rgba(10,102,217,0.2) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    .why-visual-inner { position: relative; z-index: 1; }
-    .why-visual h3 {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.25;
-      margin-bottom: 24px;
-      letter-spacing: -0.3px;
-    }
-    .why-visual h3 span { color: var(--blue); }
-    .why-stat-row { display: flex; flex-direction: column; gap: 16px; }
-    .why-stat {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .why-stat:last-child { border-bottom: none; padding-bottom: 0; }
-    .why-stat-label { font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 500; }
-    .why-stat-val {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--white);
-    }
-    .why-stat-bar-wrap { width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-top: 6px; }
-    .why-stat-bar { height: 4px; background: var(--blue); border-radius: 2px; }
-
-    /* ─── CCTV ──────────────────────────────────────────── */
-    .cctv-section { background: var(--light); padding: 88px 5%; }
-
-    /* ─── DATA CABLING ───────────────────────────────────── */
-    .cabling-section { background: var(--white); padding: 88px 5%; }
-    .cabling-image-wrap {
-      border-radius: 16px;
-      overflow: hidden;
+    /* ─── SPLIT SECTIONS ───────────────────────────────── */
+    .split-section { padding: 88px 5%; }
+    .split-section.bg-light { background: var(--light); }
+    .split-section.bg-white { background: var(--white); }
+    .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .split-grid.reverse { direction: rtl; }
+    .split-grid.reverse > * { direction: ltr; }
+    .split-text .section-heading { margin-bottom: 16px; }
+    .split-text p { font-size: 15px; color: var(--mid-grey); line-height: 1.8; margin-bottom: 28px; }
+    .split-benefits { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+    .benefit-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--dark-text); line-height: 1.5; }
+    .benefit-dot { width: 20px; height: 20px; background: var(--blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .benefit-dot svg { width: 11px; height: 11px; color: var(--blue); }
+    .split-image {
+      border-radius: 16px; overflow: hidden;
       box-shadow: 0 16px 48px rgba(0,0,0,0.12);
       aspect-ratio: 4/3;
       background: linear-gradient(135deg, #0b1830 0%, #1a3a6e 100%);
     }
-    .cabling-image-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .split-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* ─── TESTIMONIALS ──────────────────────────────────── */
+    /* ─── MID CTA ──────────────────────────────────────── */
+    .mid-cta {
+      background: var(--blue); padding: 72px 5%; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .mid-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .mid-cta h2 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; color: var(--white); margin-bottom: 12px; letter-spacing: -0.3px; position: relative; }
+    .mid-cta p { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.7; max-width: 560px; margin: 0 auto 32px; position: relative; }
+    .mid-cta .btn-primary { background: var(--white); color: var(--blue); position: relative; }
+    .mid-cta .btn-primary:hover { background: var(--light); transform: translateY(-1px); }
+
+    /* ─── TESTIMONIALS ────────────────────────────────── */
     .testimonials-section { background: var(--light); padding: 88px 5%; }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .testimonial-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px 24px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px 28px;
+      display: flex; flex-direction: column; gap: 16px;
     }
-    .stars { color: var(--blue); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
-    .testimonial-card p { font-size: 14px; color: var(--slate); line-height: 1.75; margin-bottom: 22px; }
-    .testimonial-author { display: flex; align-items: center; gap: 12px; }
-    .author-avatar {
-      width: 40px; height: 40px;
-      background: var(--blue);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--white);
+    .testimonial-stars { display: flex; gap: 4px; }
+    .testimonial-stars svg { width: 18px; height: 18px; color: var(--blue); fill: var(--blue); }
+    .testimonial-quote { font-size: 14.5px; line-height: 1.75; color: var(--slate); flex: 1; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--blue); display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: var(--white);
       flex-shrink: 0;
     }
-    .author-name { font-size: 14px; font-weight: 700; color: var(--navy); }
-    .author-role { font-size: 12px; color: var(--mid-grey); margin-top: 2px; }
+    .testimonial-name { font-family: 'Montserrat', sans-serif; font-size: 13.5px; font-weight: 700; color: var(--navy); }
+    .testimonial-role { font-size: 12px; color: var(--mid-grey); }
+    @media (max-width: 960px) { .testimonials-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 580px) { .testimonials-grid { grid-template-columns: 1fr; } }
 
-    /* ─── CTA BANNER ────────────────────────────────────── */
-    .cta-section {
-      background: var(--navy);
-      padding: 88px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    /* ─── FINAL CTA ────────────────────────────────────── */
+    .final-cta {
+      background: var(--navy); padding: 88px 5%;
+      display: flex; align-items: center; justify-content: center; text-align: center;
     }
-    .cta-left {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .cta-left-inner { max-width: 640px; text-align: center; }
-    .cta-icon-wrap {
-      width: 64px; height: 64px;
-      border: 1.5px solid rgba(10,102,217,0.5);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 24px;
-    }
-    .cta-icon-wrap svg { width: 32px; height: 32px; color: var(--blue); }
-    .cta-left h2 {
-      font-size: clamp(28px, 3vw, 42px);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 12px;
-      letter-spacing: -0.3px;
-    }
-    .cta-left h2 span { color: var(--blue); }
-    .cta-left p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
-    .cta-left .btn-primary { font-size: 14px; padding: 14px 32px; }
-    .cta-right { display: none; }
-    .cta-right-inner { display: none; }
-    .cta-right h3 { display: none; }
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .contact-row:last-child { border-bottom: none; }
-    .contact-icon {
-      width: 42px; height: 42px;
-      background: var(--blue);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .contact-icon svg { width: 18px; height: 18px; color: var(--white); }
-    .contact-detail { font-size: 14px; color: var(--mid-grey); }
-    .contact-detail strong { display: block; font-size: 15px; font-weight: 600; color: var(--navy); }
+    .final-cta-inner { max-width: 640px; }
+    .final-cta h2 { font-size: clamp(28px, 3vw, 42px); font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.3px; }
+    .final-cta h2 span { color: var(--blue); }
+    .final-cta p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
 
     /* ─── FOOTER ────────────────────────────────────────── */
-    footer {
-      background: var(--slate);
-      padding: 60px 5% 28px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1.5fr;
-      gap: 48px;
-      margin-bottom: 40px;
-    }
-    .footer-brand-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
+    footer { background: var(--slate); padding: 60px 5% 28px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 48px; margin-bottom: 40px; }
+    .footer-brand-name { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
     .footer-brand-name span { color: var(--blue); }
     .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.75; max-width: 260px; }
-    footer h4 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 18px;
-    }
+    footer h4 { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .footer-links li a { font-size: 13px; color: rgba(255,255,255,0.6); transition: color 0.2s; }
     .footer-links li a:hover { color: var(--white); }
     .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 12px; line-height: 1.55; }
     .footer-contact-item svg { width: 14px; height: 14px; color: var(--blue); margin-top: 2px; flex-shrink: 0; }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .footer-bottom p, .footer-bottom a { font-size: 12px; color: rgba(255,255,255,0.35); }
     .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
 
     /* ─── SCROLL TOP ─────────────────────────────────────── */
-    .scroll-top {
-      position: fixed; bottom: 28px; right: 28px;
-      width: 42px; height: 42px;
-      background: var(--blue);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      opacity: 0; transform: translateY(8px);
-      transition: opacity 0.3s, transform 0.3s, background 0.2s;
-      z-index: 90;
-      box-shadow: 0 4px 16px rgba(10,102,217,0.4);
-    }
+    .scroll-top { position: fixed; bottom: 28px; right: 28px; width: 42px; height: 42px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transform: translateY(8px); transition: opacity 0.3s, transform 0.3s, background 0.2s; z-index: 90; box-shadow: 0 4px 16px rgba(10,102,217,0.4); }
     .scroll-top.visible { opacity: 1; transform: translateY(0); }
     .scroll-top:hover { background: var(--blue-dark); }
     .scroll-top svg { width: 18px; height: 18px; color: white; }
@@ -779,14 +316,9 @@
       .hero-right { display: none; }
       .hero-left { padding: 110px 6% 72px; }
       .hero-left::after { display: none; }
-      .stats-strip { grid-template-columns: repeat(2, 1fr); }
-      .stat-item:nth-child(2) { border-right: none; }
-      .overview-grid { grid-template-columns: 1fr; gap: 0; }
       .services-grid { grid-template-columns: 1fr 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .why-visual { display: none; }
-      .cta-section { padding: 64px 5%; }
-      .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .split-grid, .split-grid.reverse { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
+      .split-grid.reverse .split-image { order: -1; }
       .footer-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
@@ -794,8 +326,6 @@
     }
     @media (max-width: 580px) {
       .services-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .stats-strip { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -803,21 +333,21 @@
 
 <!-- ═══════════════════ NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">
+  <a href="/" class="nav-logo">
     <img src="images/smart wifi solutions logo.png" alt="Smart WiFi Solutions" class="nav-logo-img">
   </a>
   <ul class="nav-links">
-    <li><a href="#">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li class="nav-dropdown">
-      <a href="#services" class="nav-dropdown-toggle">Services ▾</a>
+      <a href="#" class="nav-dropdown-toggle">Services ▾</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="/business-wifi">Business WiFi</a></li>
-        <li><a href="/commercial-cctv">Commercial CCTV</a></li>
-        <li><a href="/data-cabling">Data Cabling</a></li>
+        <li><a href="/business-wifi.html">Business WiFi</a></li>
+        <li><a href="/commercial-cctv.html">Commercial CCTV</a></li>
+        <li><a href="/data-cabling.html">Data Cabling</a></li>
       </ul>
     </li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/contact" class="nav-cta">Book a Survey</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="/contact.html" class="nav-cta">Book a Survey</a></li>
   </ul>
   <div class="nav-phone">📞 07542 533 392</div>
   <div class="hamburger" onclick="toggleMenu()">
@@ -826,100 +356,99 @@
 </nav>
 
 <!-- ═══════════════════ HERO -->
-<section class="hero" id="home">
+<section class="hero" id="top">
   <div class="hero-left">
     <div class="hero-content">
-      <div class="hero-badge"><span></span>WiFi &middot; CCTV &middot; Structured Cabling</div>
-      <h1>Keeping You <span class="blue">Connected.</span></h1>
+      <div class="hero-badge"><span></span>Business WiFi</div>
+      <h1>Business <span class="blue">WiFi</span></h1>
       <div class="hero-rule"></div>
-      <h2 class="hero-tagline">Expert telecommunications engineers delivering reliable home and business WiFi, home and commercial CCTV and structured data cabling.</h2>
-      <p>Find out more below or get in touch with a member of our team who will be happy to help.</p>
+      <p>Reliable business WiFi solutions for businesses across Salisbury, Wiltshire and throughout the UK. Smart WiFi Solutions designs, installs and optimises business WiFi networks that eliminate dead zones, improve performance and keep your business connected.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">
+        <a href="/contact.html" class="btn-primary">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Book a free survey
+          Book a Free Site Survey
         </a>
-        <a href="#wifi" class="btn-outline-white">Our Services</a>
+        <a href="/contact.html" class="btn-outline-white">Contact Us</a>
       </div>
     </div>
   </div>
-  <div class="hero-right">
-    <!-- photo background via CSS -->
+  <div class="hero-right"></div>
+</section>
+
+<!-- ═══════════════════ WHAT IS BUSINESS WIFI -->
+<section class="what-is-section">
+  <div class="what-is-section-tag">Business WiFi explained</div>
+  <h2 class="what-is-heading">What is <span>business WiFi?</span></h2>
+  <div class="what-is-layout">
+    <!-- Left: static content box -->
+    <div class="what-is-left">
+      <div class="wi-panel active">
+        <div class="wi-panel-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+        </div>
+        <h3>What is business WiFi?</h3>
+        <p>Business WiFi is a professionally designed wireless network built to support the demands of modern commercial environments. Unlike a domestic broadband router, business WiFi uses enterprise-grade equipment and multiple access points to deliver reliable, high-performance connectivity throughout your premises.</p>
+        <div class="wi-panel-points">
+          <div class="wi-point">Designed for commercial environments, not domestic use</div>
+          <div class="wi-point">Multiple access points for whole-building coverage</div>
+          <div class="wi-point">Supports large numbers of simultaneous connections</div>
+          <div class="wi-point">Enterprise-grade performance and stability</div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: accordion -->
+    <div class="what-is-right">
+      <div class="wi-accordion">
+        <div class="wi-acc-item" onclick="toggleAcc(this)">
+          <div class="wi-acc-header">
+            <div class="wi-acc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="wi-acc-label">Who needs it?</span>
+            <svg class="wi-acc-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="wi-acc-body">
+            <p>Any business depending on reliable connectivity — from offices and warehouses to care homes and retail premises.</p>
+          </div>
+        </div>
+        <div class="wi-acc-item" onclick="toggleAcc(this)">
+          <div class="wi-acc-header">
+            <div class="wi-acc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <span class="wi-acc-label">Security &amp; reliability</span>
+            <svg class="wi-acc-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="wi-acc-body">
+            <p>Network segregation, enterprise encryption and proactive monitoring keep your data safe and your connection stable.</p>
+          </div>
+        </div>
+        <div class="wi-acc-item" onclick="toggleAcc(this)">
+          <div class="wi-acc-header">
+            <div class="wi-acc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="wi-acc-label">What to expect from Smart WiFi Solutions</span>
+            <svg class="wi-acc-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="wi-acc-body">
+            <div class="wi-acc-body-inner">
+              <p style="margin-bottom: 14px;">From the moment you get in touch, we take the time to understand your business before recommending anything. Every installation begins with a thorough site survey — we assess your building, identify coverage requirements and design a solution that fits your operation. You'll always deal with experienced engineers, not a call centre, and we're on hand long after installation is complete.</p>
+              <div class="wi-acc-points">
+                <div class="wi-acc-point">A free site survey with no obligation, carried out by qualified engineers who understand your environment</div>
+                <div class="wi-acc-point">A professionally installed network using quality equipment, completed with minimal disruption to your business</div>
+                <div class="wi-acc-point">Ongoing support and a team you can call on directly — because reliable WiFi doesn't stop at installation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-
-<!-- ═══════════════════ SERVICES OVERVIEW -->
-<section class="services-overview" id="services">
-  <div class="section-header section-header-center">
-    <div class="section-tag">What We Do</div>
-    <h2 class="section-heading">Complete Connectivity Solutions</h2>
-    <p class="section-sub">From WiFi installation to CCTV and structured cabling — we design and deliver everything you need to stay connected, secure and productive.</p>
-  </div>
-  <!-- Tabs -->
-  <div class="overview-tabs">
-    <div class="overview-tab active" onclick="switchOverview('business')">For businesses</div>
-    <div class="overview-tab" onclick="switchOverview('home')">For homeowners</div>
-  </div>
-  <!-- Business panel -->
-  <div class="overview-panel active" id="overview-business">
-    <div class="overview-grid">
-      <div class="overview-card">
-        <div class="overview-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
-        </div>
-        <h3>Business WiFi</h3>
-        <div class="overview-rule"></div>
-        <p>Reliable, high-performance WiFi designed to provide seamless coverage throughout your business premises.</p>
-        <a href="/business-wifi" class="btn-find-more">Find out more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-      <div class="overview-card">
-        <div class="overview-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-        </div>
-        <h3>Commercial CCTV</h3>
-        <div class="overview-rule"></div>
-        <p>Professional CCTV installations and upgrades to help protect your people, property and assets.</p>
-        <a href="/commercial-cctv" class="btn-find-more">Find out more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-      <div class="overview-card">
-        <div class="overview-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-        </div>
-        <h3>Data cabling</h3>
-        <div class="overview-rule"></div>
-        <p>Structured cabling solutions that provide a reliable foundation for your network infrastructure.</p>
-        <a href="/data-cabling" class="btn-find-more">Find out more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-  <!-- Homeowners panel -->
-  <div class="overview-panel" id="overview-home">
-    <div class="overview-grid-2">
-      <div class="overview-card">
-        <div class="overview-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
-        </div>
-        <h3>Home WiFi</h3>
-        <div class="overview-rule"></div>
-        <p>Professional whole-home WiFi installation eliminating dead zones and providing fast, reliable coverage in every room.</p>
-        <a href="/contact" class="btn-find-more">Find out more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-      <div class="overview-card">
-        <div class="overview-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-        </div>
-        <h3>Home CCTV</h3>
-        <div class="overview-rule"></div>
-        <p>Professionally installed home CCTV systems giving you peace of mind and visible security for your property around the clock.</p>
-        <a href="/contact" class="btn-find-more">Find out more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ WIFI SOLUTIONS -->
-<section class="wifi-section dark-section" id="wifi">
+<!-- ═══════════════════ SOLUTIONS GRID -->
+<section class="wifi-section dark-section">
   <div class="section-header">
     <div class="section-tag">WiFi Solutions</div>
     <h2 class="section-heading">Business WiFi built for you</h2>
@@ -971,214 +500,196 @@
   </div>
 </section>
 
-<!-- ═══════════════════ CCTV -->
-<section class="cctv-section" id="cctv">
-  <div class="section-header">
-    <div class="section-tag">CCTV Solutions</div>
-    <h2 class="section-heading">Commercial CCTV that protects your business around the clock</h2>
-    <p class="section-sub">From HD cameras to smart recording and remote monitoring, we design and install CCTV systems that keep your people and premises safe 24/7.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+<!-- ═══════════════════ NETWORK OPTIMISATION (text left, image right) -->
+<section class="split-section bg-light">
+  <div class="split-grid">
+    <div class="split-text">
+      <div class="section-tag">Performance</div>
+      <h2 class="section-heading">Business WiFi network optimisation</h2>
+      <p>Even existing networks can suffer from poor performance if they have not been properly designed or configured. Slow speeds, dropped connections, coverage gaps and overloaded access points can all impact day-to-day operations.</p>
+      <p>Our business WiFi optimisation service identifies performance bottlenecks and improves network efficiency throughout your premises. We assess coverage, device demand, network configuration and building layout to ensure your wireless infrastructure delivers the performance your business requires.</p>
+      <div class="split-benefits">
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Improved network speed and reliability</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Elimination of WiFi dead zones</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Better support for connected devices</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Reduced downtime and disruption</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Improved user experience for staff and customers</span>
+        </div>
       </div>
-      <h3>CCTV Installation</h3>
-      <p>Professional installation of high-quality CCTV systems tailored to your premises, with minimal disruption to your daily operations.</p>
+      <a href="/contact.html" class="btn-primary">Book a Free Site Survey</a>
     </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
-      </div>
-      <h3>Remote Monitoring</h3>
-      <p>Monitor your business from anywhere, at any time, on any device. Real-time access gives you complete peace of mind wherever you are.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-      </div>
-      <h3>High-Definition Cameras</h3>
-      <p>Crystal-clear HD footage for better visibility and evidence quality — capturing every detail you need, day or night.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-      </div>
-      <h3>Smart Recording</h3>
-      <p>Intelligent motion-triggered recording with reliable storage options — ensuring footage is always there when you need it.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M22 12h-2M17.66 17.66l-1.41-1.41M12 22v-2M6.34 17.66l-1.41 1.41M2 12h2M4.93 4.93l1.41 1.41"/></svg>
-      </div>
-      <h3>Integration &amp; Support</h3>
-      <p>Seamlessly integrated with your existing network and access control systems, backed by our dedicated ongoing support team.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      </div>
-      <h3>Custom CCTV Solutions</h3>
-      <p>Bespoke CCTV designs to fit your unique environment — whether you're a small shop, warehouse, or large commercial facility.</p>
+    <div class="split-image">
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Business WiFi network optimisation" onerror="this.style.display='none'">
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ PARTNERS -->
-<section class="partners-section">
-  <div class="section-tag">Trusted by professionals</div>
-  <h2 class="section-heading">Our suppliers and partners</h2>
-  <div class="partners-logos">
-    <a class="partner-logo" href="https://ui.com/" target="_blank" rel="noopener noreferrer">
-      <img
-        src="images/ubiquiti-logo.png"
-        alt="Ubiquiti Networks"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-      >
-      <span class="logo-fallback" style="display:none">Ubiquiti</span>
-    </a>
-    <a class="partner-logo" href="https://www.adiglobaldistribution.co.uk/" target="_blank" rel="noopener noreferrer">
-      <img
-        src="images/adi0logo.png"
-        alt="ADI Global Distribution"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-      >
-      <span class="logo-fallback" style="display:none">ADI</span>
-    </a>
-    <a class="partner-logo" href="https://www.hikvision.com/uk/" target="_blank" rel="noopener noreferrer">
-      <img
-        src="images/hikvision-logo.png"
-        alt="Hikvision"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-      >
-      <span class="logo-fallback" style="display:none">Hikvision</span>
-    </a>
-    <a class="partner-logo" href="https://www.cityandguilds.com/" target="_blank" rel="noopener noreferrer">
-      <img
-        src="images/city-guilds-badge.png"
-        alt="City &amp; Guilds Level 2 Award in Communications Cabling"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-      >
-      <span class="logo-fallback" style="display:none">City &amp; Guilds</span>
-    </a>
+<!-- ═══════════════════ CUSTOM SOLUTIONS (image left, text right) -->
+<section class="split-section bg-white">
+  <div class="split-grid">
+    <div class="split-image">
+      <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=900&q=80" alt="Custom business WiFi installation" onerror="this.style.display='none'">
+    </div>
+    <div class="split-text">
+      <div class="section-tag">Bespoke design</div>
+      <h2 class="section-heading">Custom business WiFi solutions</h2>
+      <p>Every business has different connectivity requirements, which is why we never take a one-size-fits-all approach to business WiFi.</p>
+      <p>Smart WiFi Solutions designs bespoke business WiFi solutions around your premises, operational needs and future growth plans. Whether you require coverage for a small office, warehouse, care home, dental practice or multi-floor commercial building, we create a network designed specifically for your environment.</p>
+      <div class="split-benefits">
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Professional site surveys</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Coverage planning and network design</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Access point placement optimisation</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Scalable infrastructure for future expansion</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Integration with CCTV and network infrastructure</span>
+        </div>
+      </div>
+      <a href="/contact.html" class="btn-primary">Get a Free Quote</a>
+    </div>
   </div>
 </section>
 
-<!-- ═══════════════════ DATA CABLING -->
-<section class="cabling-section" id="data-cabling">
-  <div class="why-grid">
-    <div>
-      <div class="section-tag">Data Cabling</div>
-      <h2 class="section-heading" style="margin-bottom:20px;">The foundation of reliable<br>business connectivity</h2>
-      <p style="font-size:15px;color:var(--mid-grey);line-height:1.75;margin-bottom:32px;">Professional data cabling provides the foundation for reliable business connectivity. We design and install structured cabling systems that support WiFi, CCTV, phones, and network infrastructure, helping businesses maintain dependable performance, reduce disruptions, and prepare for future growth.</p>
-      <div class="why-reasons">
-        <div class="reason">
-          <div class="reason-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <div class="reason-text">
-            <h4>High-speed structured cabling</h4>
-            <p>Structured cabling designed for reliable, high-speed business connectivity across your entire premises.</p>
-          </div>
+<!-- ═══════════════════ MID CTA -->
+<div class="mid-cta">
+  <h2>Need better business WiFi?</h2>
+  <p>Poor coverage, unreliable connections and slow network performance can affect productivity and customer experience. Book a free site survey and let our team identify the best solution for your business.</p>
+  <a href="/contact.html" class="btn-primary">Book a Free Site Survey</a>
+</div>
+
+<!-- ═══════════════════ SECURE NETWORKS (text left, image right) -->
+<section class="split-section bg-light">
+  <div class="split-grid">
+    <div class="split-text">
+      <div class="section-tag">Security &amp; reliability</div>
+      <h2 class="section-heading">Secure &amp; reliable business WiFi networks</h2>
+      <p>Modern businesses depend on secure and reliable connectivity to operate effectively. From cloud-based systems and communication tools to security infrastructure and connected devices, your network plays a critical role in daily operations.</p>
+      <p>Our business WiFi installations are designed with performance, reliability and security at their core. We use professional-grade equipment and proven installation methods to deliver dependable connectivity throughout your premises while helping protect your network from unauthorised access.</p>
+      <div class="split-benefits">
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Secure wireless network configuration</span>
         </div>
-        <div class="reason">
-          <div class="reason-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-          </div>
-          <div class="reason-text">
-            <h4>One infrastructure, everything connected</h4>
-            <p>Supports WiFi, CCTV, phones, and network infrastructure from a single, well-designed foundation.</p>
-          </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Reliable connectivity across your site</span>
         </div>
-        <div class="reason">
-          <div class="reason-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div class="reason-text">
-            <h4>Fewer disruptions, better performance</h4>
-            <p>Reduces network issues, downtime, and connectivity bottlenecks so your team stays productive.</p>
-          </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Professional-grade networking equipment</span>
         </div>
-        <div class="reason">
-          <div class="reason-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="reason-text">
-            <h4>Built for the future</h4>
-            <p>Future-ready infrastructure that supports business growth and adapts to changing technology requirements.</p>
-          </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Reduced risk of outages and disruption</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Infrastructure designed for future growth</span>
         </div>
       </div>
-      <div style="margin-top:32px;">
-        <a href="/data-cabling" class="btn-primary">
-          Find out more
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
+      <a href="/contact.html" class="btn-primary">Book a Free Site Survey</a>
     </div>
-    <div class="cabling-image-wrap">
-      <img
-        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
-        alt="Professional structured data cabling installation"
-        onerror="this.parentElement.style.background='linear-gradient(135deg,#0b1830 0%,#1a3a6e 100%)'"
-      >
+    <div class="split-image">
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80" alt="Secure and reliable business WiFi networks" onerror="this.style.display='none'">
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════ TESTIMONIALS -->
 <section class="testimonials-section">
-  <div class="section-header section-header-center" style="max-width:560px;margin:0 auto 52px;">
+  <div class="section-header section-header-center">
     <div class="section-tag">Client Feedback</div>
-    <h2 class="section-heading">Trusted by Businesses Across the UK</h2>
+    <h2 class="section-heading">Trusted by Businesses<br>Across the UK</h2>
   </div>
-  <div class="testimonials-grid" style="max-width:1100px;margin:0 auto;">
+  <div class="testimonials-grid">
     <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p>Smart WiFi Solutions transformed our office connectivity. We had constant dead zones on the upper floor — they surveyed, installed, and had us fully covered within a day. Couldn't be happier.</p>
+      <div class="testimonial-stars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-quote">Smart WiFi Solutions transformed our office connectivity. We had constant dead zones on the upper floor — they surveyed, installed, and had us fully covered within a day. Couldn't be happier.</p>
       <div class="testimonial-author">
-        <div class="author-avatar">JM</div>
+        <div class="testimonial-avatar">JM</div>
         <div>
-          <div class="author-name">James Mitchell</div>
-          <div class="author-role">Operations Manager, Meridian Group</div>
+          <div class="testimonial-name">James Mitchell</div>
+          <div class="testimonial-role">Operations Manager, Meridian Group</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p>From the initial quote to the final handover, the team was professional, punctual, and thorough. Our warehouse now has full WiFi coverage and our CCTV system is excellent. Great value.</p>
+      <div class="testimonial-stars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-quote">From the initial quote to the final handover, the team was professional, punctual, and thorough. Our warehouse now has full WiFi coverage and our CCTV system is excellent. Great value.</p>
       <div class="testimonial-author">
-        <div class="author-avatar">SB</div>
+        <div class="testimonial-avatar">SB</div>
         <div>
-          <div class="author-name">Sarah Blackwood</div>
-          <div class="author-role">Director, Blackwood Logistics</div>
+          <div class="testimonial-name">Sarah Blackwood</div>
+          <div class="testimonial-role">Director, Blackwood Logistics</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p>The support is second to none. Any time we've had an issue they've been on it immediately. It's rare to find a company that actually does what they say they will. Smart WiFi Solutions deliver every time.</p>
+      <div class="testimonial-stars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-quote">The support is second to none. Any time we've had an issue they've been on it immediately. It's rare to find a company that actually does what they say they will. Smart WiFi Solutions deliver every time.</p>
       <div class="testimonial-author">
-        <div class="author-avatar">RP</div>
+        <div class="testimonial-avatar">RP</div>
         <div>
-          <div class="author-name">Ryan Patterson</div>
-          <div class="author-role">IT Lead, Patterson Retail Group</div>
+          <div class="testimonial-name">Ryan Patterson</div>
+          <div class="testimonial-role">IT Lead, Patterson Retail Group</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ CTA / CONTACT -->
-<section class="cta-section" id="contact">
-  <div class="cta-left">
-    <div class="cta-left-inner">
-      <h2>Book a Free<br><span>Site Survey</span></h2>
-      <p>Let's discuss your connectivity requirements and identify the best solution for your business.</p>
-      <a href="/contact" class="btn-primary">Get in touch</a>
-    </div>
+<!-- ═══════════════════ FINAL CTA -->
+<div class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Book a free<br><span>site survey</span></h2>
+    <p>Let's discuss your connectivity requirements and identify the best business WiFi solution for your premises.</p>
+    <a href="/contact.html" class="btn-primary">Get in touch</a>
   </div>
-</section>
+</div>
 
 <!-- ═══════════════════ FOOTER -->
 <footer>
@@ -1190,9 +701,9 @@
     <div>
       <h4>Services</h4>
       <ul class="footer-links">
-        <li><a href="/business-wifi">Business WiFi</a></li>
-        <li><a href="/commercial-cctv">Commercial CCTV</a></li>
-        <li><a href="/data-cabling">Data cabling</a></li>
+        <li><a href="/business-wifi.html">Business WiFi</a></li>
+        <li><a href="/commercial-cctv.html">Commercial CCTV</a></li>
+        <li><a href="/data-cabling.html">Data cabling</a></li>
       </ul>
     </div>
     <div>
@@ -1214,19 +725,17 @@
   <div class="footer-bottom">
     <p>© 2026 Smart WiFi Solutions (Smart Fibre Solutions Ltd). All rights reserved.</p>
     <div style="display:flex;gap:20px;">
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/data-policy">GDPR / Data Policy</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/data-policy.html">GDPR / Data Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- ═══════════════════ SCROLL TOP -->
 <div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </div>
 
 <script>
-  // Scroll-based nav style
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
     const btn = document.getElementById('scrollTop');
@@ -1238,8 +747,6 @@
       btn.classList.remove('visible');
     }
   });
-
-  // Mobile menu
   function toggleMenu() {
     const links = document.querySelector('.nav-links');
     const nav = document.getElementById('navbar');
@@ -1259,12 +766,8 @@
     }
   }
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.nav-links').style.display = 'none';
-    });
+    link.addEventListener('click', () => { document.querySelector('.nav-links').style.display = 'none'; });
   });
-
-  // Fade-in on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1273,20 +776,18 @@
       }
     });
   }, { threshold: 0.08 });
-
-  function switchOverview(tab) {
-    document.querySelectorAll('.overview-tab').forEach((t, i) => t.classList.toggle('active', (i === 0 && tab === 'business') || (i === 1 && tab === 'home')));
-    document.getElementById('overview-business').classList.toggle('active', tab === 'business');
-    document.getElementById('overview-home').classList.toggle('active', tab === 'home');
+  function toggleAcc(el) {
+    const isOpen = el.classList.contains('active');
+    document.querySelectorAll('.wi-acc-item').forEach(item => item.classList.remove('active'));
+    if (!isOpen) el.classList.add('active');
   }
 
-  document.querySelectorAll('.service-card, .reason, .testimonial-card, .overview-card').forEach(el => {
+  document.querySelectorAll('.service-card, .benefit-item, .split-image').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
     el.style.transition = 'opacity 0.45s ease, transform 0.45s ease, border-color 0.2s, box-shadow 0.2s';
     observer.observe(el);
   });
 </script>
-
 </body>
 </html>
